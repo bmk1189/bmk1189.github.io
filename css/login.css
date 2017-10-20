@@ -1,0 +1,75 @@
+/*LogIn Principal*/
+.mainLogIn {
+	height: 100vh;
+	width: 100%;
+	overflow-y: : auto;
+	overflow-x: hidden;
+}
+
+.logIn-box {
+	margin-top: 16%;
+	background-color: rgba(255, 255, 255, 0.7);
+	padding-top: 0;
+	padding-bottom: 0;
+	box-shadow: #5d5d5d 0px 0px 50px;
+}
+
+.sectionDer {
+	padding-top: 4%;
+	padding-bottom: 4%;
+}
+
+.logInput {
+	padding: 2px 4px !important;
+	height: 30px !important;
+}
+
+.logInput::-moz-placeholder { font-size: 14px }
+
+#radios > .radio + .radio {
+	margin-top: 0px;
+}
+
+.logRadio {
+	margin-top: 6.25px !important;
+}
+
+.linea-izq{
+	border-left: solid #787878 1px;
+}
+
+.logOut {
+	padding: 3px 7px !important;
+	border-radius: 0;
+	border-color: #d9534f !important;
+	z-index: 99;
+}
+
+.mar-top-n{
+	margin-top: 12%
+}
+
+@media screen and (max-width: 991px) {
+    .linea-izq{
+		border-left: none;
+	}
+	.mar-top-n{
+		margin-top: 5%
+	}
+
+	.mar-bot-n{
+		margin-bottom: 2%;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.mar-top-n{
+		margin-top: 15%
+	}
+}
+
+@media screen and (max-width: 1320px) {
+	.mar-top-n{
+		margin-top: 18%
+	}
+}

@@ -1,0 +1,136 @@
+
+.cursor-hand{
+	cursor: pointer;
+}
+
+.mar-bot-1p{
+	margin-bottom: 3%;
+}
+.mar-bot-9p{
+	margin-bottom: 9%;
+}
+.mar-bot-10p{
+	margin-bottom: 10%;
+}
+.mar-bot-11p{
+	margin-bottom: 11.5%;
+}
+.mar-top-2p{
+	margin-top: 2%;
+}
+.mar-top-5p{
+	margin-top: 5%;
+}
+.mar-top-10p{
+	margin-top: 10%;
+}
+.mar-top-5{
+	margin-top: 5px;
+}
+
+.mar-top-10{
+	margin-top: 10px;
+}
+.mar-top-15{
+	margin-top: 15px;
+}
+
+.mar-top-20{
+	margin-top: 20px;
+}
+
+.mar-top-25{
+	margin-top: 25px;
+}
+
+.mar-top-30{
+	margin-top: 30px;
+}
+
+.mar-top-35{
+	margin-top: 35px;
+}
+
+.mar-top-40{
+	margin-top: 40px;
+}
+.mar-bot-5{
+	margin-bottom: 5px;
+}
+
+.mar-bot-10{
+	margin-bottom: 10px;
+}
+
+.mar-bot-15{
+	margin-bottom: 15px;
+}
+
+.mar-bot-10s{
+	margin-bottom: 10px !important;
+}
+
+.mar-bot-20{
+	margin-bottom: 20px;
+}
+.mar-l-10{
+	margin-left: 10px;
+}
+
+@font-face{
+	font-family:'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url(../fonts/Roboto-Regular.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.excel-icon-20px{
+   display: inline-block;
+   width:   20px;
+   height:  24px;
+   background: url("images/xls_icon.png");
+   background-size:cover;
+   float: left;
+   margin-right: 1em;
+}
+
+.pdf-icon-20px{
+   display: inline-block;
+   width:   20px;
+   height:  24px;
+   background: url("images/pdf_icon.png");
+   background-size:cover;
+   float: left;
+   margin-right: 1em;
+}
+
+h1,h2,h3,h4,h5,h6{
+	text-rendering:optimizeLegibility;
+}
+
+.vertical-center{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.modalWindowExtraLarge .modal-dialog{
+	width :90%;
+	min-width: 200px;
+}
+
+.textAt13px{
+	font-size:13px;
+}
+
+.noSpaces{
+	margin:0px;
+	padding:0px;
+}

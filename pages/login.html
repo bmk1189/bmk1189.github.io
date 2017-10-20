@@ -1,0 +1,40 @@
+<ng-form name="loginForm">
+<section class="mainLogIn" ng-keypress="keyPress($event)">
+	<div class="row">
+		<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 row logIn-box">
+			<div class="linea-izq col-lg-7 col-md-7 col-sm-12 col-xs-12 sectionDer">
+				<h3 style="text-align: center;">Log in to account</h3>
+
+				<div class="row mar-top-10">
+					<label class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-3 col-sm-offset-2 col-xs-4 col-xs-offset-0">E-mail</label>
+					<div class="col-lg-8 col-md-8 col-sm-5 col-xs-8">
+						<input type="email" ng-model="email" class="form-control logInput" name="email" id="email" placeholder="Your email" required="required" />
+					</div>
+				</div>
+				<div class="row mar-top-10">
+					<label class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0 col-sm-3 col-sm-offset-2 col-xs-4 col-xs-offset-0">Password</label>
+					<div class="col-lg-8 col-md-8 col-sm-5 col-xs-8">
+						<input type="password" ng-model="password" class="form-control logInput" name="password" id="password" placeholder="Password"  required="required"/>
+					</div>
+				</div>
+				<div class="row mar-top-10">
+					<!-- <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12 col-xs-offset-0 mar-bot-n row"> -->
+					<div class="col-lg-8 col-lg-offset-4 col-md-8 col-md-offset-4 col-sm-5 col-sm-offset-3 col-xs-8 col-xs-offset-4">
+						<button ng-click="logIn()" title="{{loginForm.$valid?'Log in to your account':'Invalid or pending inputs'}}" class="btn btn-primary btn-success col-lg-12 col-md-12 col-sm-12 col-xs-12" value="Submit" ng-disabled="!loginForm.$valid">Log In</button>
+					</div>
+				</div>
+				<div class="row mar-top-10 pull-right">
+					Not a user yet? <a ng-click="goToSignUp()"> Sign up!</a>
+				</div>
+			</div>
+			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 sectionDer ">
+				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
+					<span style="display: flex; justify-content: center;  align-items: center;">
+						<img src="css/images/beenVerified.png" width="100%"></img>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</ng-form>

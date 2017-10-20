@@ -1,0 +1,84 @@
+<section id="reports" class="container">
+	<header class="row">
+		<h1 class="col-lg- col-md-6 col-sm-6 col-xs-12">
+			<strong>Your reports</strong>
+		</h1>
+		<ng-form name="lookUpEmailForm" ng-keypress="keyPress($event)">
+				<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 mar-top-5">
+					<div class="input-group">
+					 	<input type="email" class="form-control" placeholder="Verify new e-mail address" aria-describedby="basic-addon2" ng-model="lookUpEmailField" required="required" />
+					  	<span class="input-group-addon glyphicon glyphicon-search"
+							ng-class="lookUpEmailForm.$valid?'btn-success':'btn-warning'"
+					  		id="basic-addon2"
+							ng-click="lookUpEmailForm.$valid?lookUpEmail():null"
+							title="{{lookUpEmailForm.$valid?('Look up for '+ lookUpEmailField) :'Invalid email'}}">
+						</span>
+					</div>
+				</div>
+		</ng-form>
+	</header>
+
+	<div class="row mar-top-15">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div style="width: 100%; height:400px overflow: auto;">
+				<table class="table table-bordered table-striped"
+					style="min-height: 200px; width: auto;" >
+					<thead class="text-uppercase table-header">
+						<tr class="info text-center" style="height: 2em;">
+							<th class="text-center" style="padding-bottom: 25px max-height: 2em !important;"
+								title="Open report"><label>Open</label>
+							</th>
+							<th title="E-mail">
+								<label class="control-label">e-mail</label>
+								<div class="has-feedback">
+									<input type="text" class="form-control input-sm"
+										placeholder="Filter..." ng-model="search.emailRequested" ng-change="filterReports('[\'emailRequested\']')"
+										ng-model-options="{debounce:700}"> <span
+										class="glyphicon glyphicon-filter form-control-feedback"
+										aria-hidden="true"></span>
+									</input>
+								</div>
+							</th>
+
+							<th title="Format: yyyy/mm/dd">
+								<label class="control-label">Date Verified</label>
+								<span
+								class="glyphicon glyphicon-calendar"
+								aria-hidden="true"></span>
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-hide="filterList.length>0"	>
+							<td class="text-center" colspan="100%">
+								 &#8826;&#8826; No matching reports >>
+							</td>
+						</tr>
+						<tr class="textoA11px sin_espacios"
+							ng-repeat="report in filterList | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize"
+						>
+
+							<td class="text-center">
+								<span class="glyphicon glyphicon-pencil cursor-mano"
+								ng-click="openReport(report)"></span>
+							</td>
+
+							<td class="text-left">
+								<label>{{ ::report.emailRequested }}</label>
+							</td>
+							<td class="text-left">
+								<label>{{::report.requestDate | date :'yyyy/MM/dd'}}</label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<pagination total-items="filterList.length" items-per-page="pageSize"
+		ng-model="currentPage" max-size="10" class="pagination-sm"
+		previous-text="Previous" next-text="Next" first-text="First"
+		last-text="Last">
+	</pagination>
+</section>
